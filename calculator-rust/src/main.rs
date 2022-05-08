@@ -12,7 +12,7 @@ fn main() {
 
   let result = operator(opt, first_number, second_number);
   
-  println!("{:?}", result);
+  println!("{:?}", output(first_number, second_number, opt, result));
 }
 
 
@@ -30,3 +30,6 @@ fn operator(operator: char, first_number: f32, second_number: f32) -> f32{
   }
 }
 
+fn output(first_number: f32, second_number: f32, operator: char, result: f32) -> String {
+  format!("{} {} {} = {}", first_number, operator, second_number, result)
+}
